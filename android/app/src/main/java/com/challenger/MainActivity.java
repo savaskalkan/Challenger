@@ -1,3 +1,5 @@
+import android.os.Bundle;
+
 package com.challenger;
 
 import com.facebook.react.ReactActivity;
@@ -12,4 +14,10 @@ public class MainActivity extends ReactActivity {
   protected String getMainComponentName() {
     return "Challenger";
   }
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(null);
+  }
+
 }
