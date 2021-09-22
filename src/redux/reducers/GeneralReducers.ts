@@ -3,7 +3,6 @@ import {
   SET_BASKET_LIST,
   ADD2_BASKET_LIST,
   REMOVE_FROM_BASKET_LIST,
-  UPDATE_PRODUCT,
 } from '../actions/types';
 import {iGeneralState} from '../interfaces';
 
@@ -25,13 +24,6 @@ export default (state = INITIAL_STATE, action: any) => {
     case REMOVE_FROM_BASKET_LIST:
       const newList = state.basketList.filter(x => x.id !== action.payload);
       return {...state, basketList: newList};
-
-    case UPDATE_PRODUCT:
-      const updateList = state.basketList.filter(
-        x => x.id !== action.payload.id,
-      );
-      updateList.push(action.payload);
-      return {...state, basketList: updateList};
 
     default:
       return state;

@@ -24,6 +24,7 @@ const ProductCard = (props: {
         <Text style={styles.nameText}>{name}</Text>
         <Text>Colour: {colour}</Text>
         <Text>Price: {price}</Text>
+      </View>
         <TouchableOpacity
           onPress={() => onPress(item)}
           style={styles.priceText}>
@@ -31,7 +32,6 @@ const ProductCard = (props: {
             {checkInBasket ? 'Remove' : 'Add to Basket'}
           </Text>
         </TouchableOpacity>
-      </View>
     </View>
   );
 };

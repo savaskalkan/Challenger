@@ -18,7 +18,11 @@ const styles = StyleSheet.create({
   },
   infoView: {flexShrink: 1},
   nameText: {fontWeight: 'bold'},
-  priceText: {alignSelf: 'flex-end', bottom: 0},
+  priceText: {
+    position: 'absolute',
+    bottom: 10,
+    right: 10,
+  },
   addText: {color: '#808080'},
   loadingCard: {
     width: '90%',
@@ -34,11 +38,6 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     color: 'teal',
-  },
-  cardFooter: {
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    alignItems: 'center',
   },
   cardFooterButtonSet: {
     flexDirection: 'row',

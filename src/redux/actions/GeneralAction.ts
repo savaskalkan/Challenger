@@ -3,7 +3,6 @@ import {
   SET_BASKET_LIST,
   ADD2_BASKET_LIST,
   REMOVE_FROM_BASKET_LIST,
-  UPDATE_PRODUCT,
 } from './types';
 
 import {iProduct} from '../interfaces';
@@ -30,11 +29,5 @@ export const RemoveFromBasketList = (id: number) => {
   return {
     type: REMOVE_FROM_BASKET_LIST,
     payload: id,
-  };
-};
-export const UpdateProduct = (product: iProduct) => {
-  return {
-    type: UPDATE_PRODUCT,
-    payload: product,
   };
 };
