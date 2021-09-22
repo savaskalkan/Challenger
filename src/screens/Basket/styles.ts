@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignSelf: 'center',
     marginVertical: 10,
-  }
+  },
 });
 
 export default styles;

@@ -1,18 +1,19 @@
-import ApiUtils from './ApiUtils';
-import config from '../config';
+import axios from 'axios';
+
+axios.defaults.baseURL =
+  'https://my-json-server.typicode.com/benirvingplt/products';
+
 export default {
   getListofProducts: function () {
-    const url = `${config.baseUrl}/products`;
-    return fetch(url)
-      .then(ApiUtils.checkStatus)
-      .then(response => response.json())
+    return axios
+      .get('/products')
+      .then(response => response.data)
       .catch(e => e);
   },
   getProduct: function (productId: number) {
-    const url = `${config.baseUrl}/products/${productId}`;
-    return fetch(url)
-      .then(ApiUtils.checkStatus)
-      .then(response => response.json())
+    return axios
+      .get(`/products/${productId}`)
+      .then(response => response.data)
       .catch(e => e);
   },
 };
