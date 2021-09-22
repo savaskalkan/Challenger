@@ -59,7 +59,7 @@ const List: FC<iProps> = ({navigation}) => {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="list-screen">
       {!productList.length ? (
         <Loading text="Loading..." />
       ) : (
