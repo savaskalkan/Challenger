@@ -21,7 +21,7 @@ import styles from './styles';
 const BASKET_LOGO = require('../../images/basketLogo.png');
 
 interface iProps {
-  navigation: any;
+  navigation?: any;
 }
 
 const List: FC<iProps> = ({navigation}) => {

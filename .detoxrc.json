@@ -5,9 +5,9 @@
   "apps": {
     "ios": {
       "type": "ios.app",
-      "binaryPath": "./ios/build/Build/Products/Release-iphonesimulator/Challenger.app",
-      "build": "xcodebuild -project ios/Challenger.xcodeproj -scheme Challenger -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build -UseModernBuildSystem=NO -quiet"
-    },
+      "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/Challenger.app",
+      "build": "export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild -project ios/Challenger.xcodeproj -UseNewBuildSystem=NO -scheme Challenger -configuration Release -sdk iphonesimulator -derivedDataPath ios/build -quiet"
+      },
     "android": {
       "type": "android.apk",
       "binaryPath": "SPECIFY_PATH_TO_YOUR_APP_BINARY"
